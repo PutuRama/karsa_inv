@@ -2459,7 +2459,8 @@ body.tentang-page {
 }
 
 /* Hasil & Tentang */
-.whatif { background: var(--white); }
+.hg-body { overflow-x: hidden; }
+.whatif { background: var(--white); overflow: hidden; }
 .whatif-header { background: var(--tan-300); border-bottom: 0.1875rem solid var(--ink); padding: 3.15rem 1.75rem; text-align: center; }
 .whatif-header h1 { font-family: "Archivo Black", sans-serif; font-size: clamp(1.65rem,5vw,2.4rem); }
 .whatif-sub { text-align: center; padding: 1.575rem; font-family: "Space Mono", monospace; font-size: 1rem; color: var(--gray-dark); }
@@ -2473,14 +2474,16 @@ body.tentang-page {
 .toggle-row { display:flex; gap:1.05rem; justify-content:center; }
 .toggle-btn { flex:1; padding:1.05rem; border:0.125rem solid var(--ink); background:var(--tan-300); font-weight:700; font-size: 1rem; cursor:pointer; }
 .toggle-btn.active { background:var(--ink); color:var(--white); }
-.dashboard { background: var(--cream); padding: 2.8rem 2.1rem; border-top:0.1875rem solid var(--ink); }
+.dashboard { background: var(--cream); padding: 2.8rem 2.1rem; border-top:0.1875rem solid var(--ink); overflow:hidden; }
 .dashboard-title { text-align:center; font-family:"Archivo Black", sans-serif; font-size:1.375rem; margin-bottom:1.25rem; }
-.dashboard-inner { max-width:53.75rem; margin:0 auto; }
-.dash-top { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-bottom:1.125rem; }
+.dashboard-inner { max-width:53.75rem; margin:0 auto; width:100%; overflow:hidden; }
+.dash-top { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-bottom:1.125rem; max-width:100%; }
 .dash-card { background:var(--tan-300); border:0.125rem solid var(--ink); padding:1.225rem; display:flex; justify-content:space-between; align-items:center; }
 .dash-label { font-size: 1rem; display:block; }
 .dash-value { font-size: 1rem; font-weight:800; }
-.dash-graph-card { background:var(--white); border:0.125rem solid var(--ink); padding:1.05rem; margin-bottom:1.125rem; }
+.dash-graph-card { background:var(--white); border:0.125rem solid var(--ink); padding:1.05rem; margin-bottom:1.125rem; overflow:hidden; max-width:100%; }
+.dash-graph-body { overflow:hidden; max-width:100%; }
+.dash-graph-body canvas, #grafikCanvas { width:100% !important; max-width:100% !important; height:auto !important; display:block; }
 .dash-graph-head { font-weight:700; font-size: 1rem; margin-bottom:0.625rem; }
 .dash-rekom { background:var(--white); border:0.125rem solid var(--ink); padding:1.4rem; }
 .dash-rekom h3 { font-size: 1rem; margin-bottom:0.5rem; }
